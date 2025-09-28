@@ -1,0 +1,431 @@
+/**
+ * Dashboard Tasks & Notes - Styles
+ * Modern colorful design for dashboard widget
+ */
+
+/* Main container */
+.dtn-widget-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Section headers */
+.dtn-section-title {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e74c3c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dtn-icon {
+    font-size: 18px;
+}
+
+.dtn-notes-icon {
+    color: #3498db;
+}
+
+.dtn-tasks-icon {
+    color: #27ae60;
+}
+
+/* Notes section */
+.dtn-notes-wrapper {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dtn-notes-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    resize: vertical;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.dtn-notes-textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    background: #ffffff;
+}
+
+.dtn-save-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.dtn-save-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.dtn-save-btn:active {
+    transform: translateY(0);
+}
+
+/* Tasks section */
+.dtn-tasks-wrapper {
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add task form */
+.dtn-add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dtn-new-task-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.dtn-new-task-input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+    background: #ffffff;
+}
+
+.dtn-add-btn {
+    padding: 10px 16px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    white-space: nowrap;
+}
+
+.dtn-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dtn-add-btn:active {
+    transform: translateY(0);
+}
+
+/* Tasks list */
+.dtn-tasks-list {
+    margin-bottom: 15px;
+}
+
+.dtn-task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dtn-task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.dtn-task-item.completed {
+    background: rgba(39, 174, 96, 0.05);
+    border-color: #27ae60;
+    opacity: 0.7;
+}
+
+.dtn-task-item.completed .dtn-task-text {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Custom checkbox */
+.dtn-task-checkbox {
+    position: relative;
+    cursor: pointer;
+    min-width: 20px;
+    margin-top: 2px;
+}
+
+.dtn-task-checkbox-input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.dtn-task-checkbox-mark {
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.dtn-task-checkbox:hover .dtn-task-checkbox-mark {
+    border-color: #3498db;
+}
+
+.dtn-task-item.completed .dtn-task-checkbox-mark {
+    background-color: #27ae60;
+    border-color: #27ae60;
+}
+
+.dtn-task-item.completed .dtn-task-checkbox-mark::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Task content */
+.dtn-task-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.dtn-task-text {
+    flex: 1;
+    font-size: 14px;
+    color: #2c3e50;
+    word-break: break-word;
+    padding: 2px 0;
+    transition: all 0.3s ease;
+}
+
+.dtn-task-edit-input {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.dtn-task-edit-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Task actions */
+.dtn-task-actions {
+    display: flex;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dtn-task-item:hover .dtn-task-actions {
+    opacity: 1;
+}
+
+.dtn-action-btn {
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dtn-action-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dtn-edit-task:hover {
+    color: #3498db;
+}
+
+.dtn-delete-task:hover {
+    color: #e74c3c;
+}
+
+/* No tasks message */
+.dtn-no-tasks {
+    text-align: center;
+    padding: 30px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+}
+
+.dtn-no-tasks p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Tasks summary */
+.dtn-tasks-summary {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Button states */
+.dtn-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.dtn-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.dtn-loader {
+    font-size: 14px;
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 782px) {
+    .dtn-widget-container {
+        margin: -10px;
+    }
+
+    .dtn-notes-wrapper,
+    .dtn-tasks-wrapper {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .dtn-section-title {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .dtn-add-task {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dtn-add-btn {
+        align-self: flex-start;
+    }
+
+    .dtn-task-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .dtn-task-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dtn-task-actions {
+        opacity: 1; /* Always show on mobile */
+        margin-top: 5px;
+    }
+
+    .dtn-tasks-summary {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Loading states */
+.dtn-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Animation classes for future enhancement */
+.dtn-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar for long content */
+.dtn-tasks-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dtn-tasks-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.dtn-tasks-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+}
+
+.dtn-tasks-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
