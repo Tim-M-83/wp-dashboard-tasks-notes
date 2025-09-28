@@ -14,10 +14,11 @@ A beautiful WordPress plugin that adds a modern dashboard widget for admins to m
 
 ## Installation
 
-1. Download the plugin files
-2. Upload the `dashboard-tasks-notes` folder to your `/wp-content/plugins/` directory
-3. Activate the plugin through the WordPress admin dashboard under Plugins → Installed Plugins
-4. The widget will automatically appear on your dashboard
+1. Download the plugin files.
+2. Put all files from this repo into one main folder "dashboard-tasks-notes".
+3. Upload the `dashboard-tasks-notes` folder to your `/wp-content/plugins/` directory, or upload the zipped folder Plugins -> Add New Plugin.
+4. Activate the plugin through the WordPress admin dashboard under Plugins → Installed Plugins.
+5. The widget will automatically appear on your dashboard.
 
 ## Usage
 
